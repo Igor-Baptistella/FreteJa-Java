@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Formulário de Usuário</title>
+</head>
+<body>
+<h2>Preencha seus dados</h2>
+<form th:action="@{/processar}" th:object="${usuario}" method="post">
+    Nome: <input type="text" th:field="*{nome}" /><br/>
+    Idade: <input type="number" th:field="*{idade}" /><br/>
+    <button type="submit">Enviar</button>
+</form>
+</body>
+</html>
